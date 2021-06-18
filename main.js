@@ -3,7 +3,7 @@ const UserGrops = arr => {
     const {roleName} = arr.roles.find(el => el.id === role)
     const {value} = arr.permissions.find(permission => permission.id === permissions)
     const filter = arr.contacts.filter(contacts => contacts.user === id)
-    return filter.map( ({firstName , lastName}) => `${name},${roleName},${firstName},${lastName} - ${value}`)
+    return filter.map( ({firstName , lastName}) => `${name},${roleName},${firstName} ${lastName} - ${value}`)
   })
 
 }
